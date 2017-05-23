@@ -1,230 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>企业网站模板</title>
-  <link rel="stylesheet" href="assets/css/amazeui.css" />
-  <link rel="stylesheet" href="assets/css/common.min.css" />
-  <link rel="stylesheet" href="assets/css/index.min.css" />
-</head>
-<body>
-  <div class="layout">
-    <!--===========layout-header================-->
-    <div class="layout-header am-hide-sm-only">
-      <!--topbar start-->
-      <div class="topbar">
-        <div class="container">
-          <div class="am-g">
-            <div class="am-u-md-3">
-              <div class="topbar-left">
-                <i class="am-icon-globe"></i>
-                <div class="am-dropdown" data-am-dropdown>
-                  <button class="am-btn am-btn-primary am-dropdown-toggle" data-am-dropdown-toggle>Language <span class="am-icon-caret-down"></span></button>
-                  <ul class="am-dropdown-content">
-                    <li><a href="#">English</a></li>
-                    <li class="am-divider"></li>
-                    <li><a href="#">Chinese</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="am-u-md-9">
-              <div class="topbar-right am-text-right am-fr">
-                Follow us
-                <i class="am-icon-facebook"></i>
-                <i class="am-icon-twitter"></i>
-                <i class="am-icon-google-plus"></i>
-                <i class="am-icon-pinterest"></i>
-                <i class="am-icon-instagram"></i>
-                <i class="am-icon-linkedin"></i>
-                <i class="am-icon-youtube-play"></i>
-                <i class="am-icon-rss"></i>
-                <a href="html/login.html">登录</a>
-                <a href="html/register.html">注册</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--topbar end-->
+<?php
 
+add_action('wp_enqueue_scripts', 'lean_index_scripts');
+function lean_index_scripts() {
+  wp_enqueue_script( 'lean-common1', get_template_directory_uri() . '/assets/js/common.js');
+  wp_enqueue_style( 'lean-index1', get_template_directory_uri() . '/assets/css/index.min.css');
+}
 
-      <div class="header-box" data-am-sticky>
-        <!--header start-->
-          <div class="container">
-            <div class="header">
-              <div class="am-g">
-                <div class="am-u-lg-2 am-u-sm-12">
-                  <div class="logo">
-                    <a href=""><img src="assets/images/logo.png" alt="" /></a>
-                  </div>
-                </div>
-                <div class="am-u-md-10">
-                  <div class="header-right am-fr">
-                    <div class="header-contact">
-                      <div class="header_contacts--item">
-  											<div class="contact_mini">
-  												<i style="color:#7c6aa6" class="contact-icon am-icon-phone"></i>
-  												<strong>0 (855) 233-5385</strong>
-  												<span>周一~周五, 8:00 - 20:00</span>
-  											</div>
-  										</div>
-                      <div class="header_contacts--item">
-  											<div class="contact_mini">
-  												<i style="color:#7c6aa6" class="contact-icon am-icon-envelope-o"></i>
-  												<strong>cn@yunshipei.com</strong>
-  												<span>随时欢迎您的来信！</span>
-  											</div>
-  										</div>
-                      <div class="header_contacts--item">
-  											<div class="contact_mini">
-  												<i style="color:#7c6aa6" class="contact-icon am-icon-map-marker"></i>
-  												<strong>天使大厦,</strong>
-  												<span>海淀区海淀大街27</span>
-  											</div>
-  										</div>
-                    </div>
-                    <a href="html/contact.html" class="contact-btn">
-                      <button type="button" class="am-btn am-btn-secondary am-radius">联系我们</button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        <!--header end-->
-
-
-        <!--nav start-->
-        <div class="nav-contain">
-          <div class="nav-inner">
-            <ul class="am-nav am-nav-pills am-nav-justify">
-              <li class=""><a href="./index.html">首页</a></li>
-              <li>
-                <a href="#">产品中心</a>
-                <!-- sub-menu start-->
-                <ul class="sub-menu">
-                  <li class="menu-item"><a href="html/product1.html">产品展示1</a></li>
-                  <li class="menu-item"><a href="html/product2.html">产品展示2</a></li>
-                  <li class="menu-item"><a href="html/product3.html">产品展示3</a></li>
-                </ul>
-                <!-- sub-menu end-->
-              </li>
-              <li><a href="html/example.html">客户案例</a></li>
-              <li><a href="html/solution.html">解决方案</a></li>
-              <li>
-                <a href="html/news.html">新闻中心</a>
-                <!-- sub-menu start-->
-                <ul class="sub-menu">
-                  <li class="menu-item"><a href="html/news-content.html">公司动态</a></li>
-                  <li class="menu-item"><a href="html/404-dark.html">行业动态</a></li>
-                  <li class="menu-item"><a href="html/404-light.html">精彩专题</a></li>
-                </ul>
-                <!-- sub-menu end-->
-              </li>
-              <li><a href="html/about.html">关于我们</a></li>
-              <li><a href="html/join.html">加入我们</a></li>
-              <li><a href="html/contact.html">联系我们</a></li>
-            </ul>
-          </div>
-        </div>
-        <!--nav end-->
-      </div>
-    </div>
-
-    <!--mobile header start-->
-    <div class="m-header">
-      <div class="am-g am-show-sm-only">
-        <div class="am-u-sm-2">
-          <div class="menu-bars">
-            <a href="#doc-oc-demo1" data-am-offcanvas="{effect: 'push'}"><i class="am-menu-toggle-icon am-icon-bars"></i></a>
-            <!-- 侧边栏内容 -->
-            <nav data-am-widget="menu" class="am-menu  am-menu-offcanvas1" data-am-menu-offcanvas >
-            <a href="javascript: void(0)" class="am-menu-toggle"></a>
-
-            <div class="am-offcanvas" >
-              <div class="am-offcanvas-bar">
-              <ul class="am-menu-nav am-avg-sm-1">
-                  <li><a href="./index.html" class="" >首页</a></li>
-                  <li class="am-parent">
-                    <a href="#" class="" >产品中心</a>
-                      <ul class="am-menu-sub am-collapse ">
-                          <li class="">
-                            <a href="html/product1.html" class="" >产品展示1</a>
-                          </li>
-                          <li class="">
-                            <a href="html/product2.html" class="" >产品展示2</a>
-                          </li>
-                          <li class="">
-                            <a href="html/product3.html" class="" >产品展示3</a>
-                          </li>
-                      </ul>
-                  </li>
-                  <li class=""><a href="html/example.html" class="" >客户案例</a></li>
-                  <li class=""><a href="html/solution.html" class="" >解决方案</a></li>
-                  <li class="am-parent">
-                    <a href="html/news.html" class="" >新闻中心</a>
-                      <ul class="am-menu-sub am-collapse  ">
-                          <li class="">
-                            <a href="html/news-content.html" class="" >公司动态</a>
-                          </li>
-                          <li class="">
-                            <a href="html/404-dark.html" class="" >行业动态</a>
-                          </li>
-                          <li class="">
-                            <a href="html/404-light.html" class="" >精彩专题</a>
-                          </li>
-                      </ul>
-                  </li>
-                  <li class=""><a href="html/about.html" class="" >关于我们</a></li>
-                  <li class=""><a href="html/join.html" class="" >加入我们</a></li>
-                  <li class=""><a href="html/contact.html" class="" >联系我们</a></li>
-                  <li class="am-parent">
-                    <a href="" class="nav-icon nav-icon-globe" >Language</a>
-                      <ul class="am-menu-sub am-collapse  ">
-                          <li>
-                            <a href="#" >English</a>
-                          </li>
-                          <li class="">
-                            <a href="#" >Chinese</a>
-                          </li>
-                      </ul>
-                  </li>
-                  <li class="nav-share-contain">
-                    <div class="nav-share-links">
-                      <i class="am-icon-facebook"></i>
-                      <i class="am-icon-twitter"></i>
-                      <i class="am-icon-google-plus"></i>
-                      <i class="am-icon-pinterest"></i>
-                      <i class="am-icon-instagram"></i>
-                      <i class="am-icon-linkedin"></i>
-                      <i class="am-icon-youtube-play"></i>
-                      <i class="am-icon-rss"></i>
-                    </div>
-                  </li>
-                  <li class=""><a href="html/login.html" class="" >登录</a></li>
-                  <li class=""><a href="html/register.html" class="" >注册</a></li>
-              </ul>
-
-              </div>
-            </div>
-          </nav>
-
-          </div>
-        </div>
-        <div class="am-u-sm-5 am-u-end">
-          <div class="m-logo">
-            <a href=""><img src="assets/images/logo.png" alt=""></a>
-          </div>
-        </div>
-      </div>
-    <!--mobile header end-->
-    </div>
-
-
-
+get_header(); ?>
 
     <!--===========layout-container================-->
     <div class="layout-container">
@@ -376,7 +158,7 @@
           <div class="am-g">
             <div class="am-u-md-3">
               <div class="features_item">
-								<img src="assets/images/index/f01.jpg" alt="">
+								<img src="<?php echo THEME_URI; ?>/assets/images/index/f01.jpg" alt="">
 								<h3 class="features_item--title">简单的适配过程</h3>
 								<p class="features_item--text">
 									用户可快速学习适配开发，通过丰富的组件库完成页面功能的移动化适配。
@@ -385,7 +167,7 @@
             </div>
             <div class="am-u-md-3">
               <div class="features_item">
-								<img src="assets/images/index/f02.jpg" alt="">
+								<img src="<?php echo THEME_URI; ?>/assets/images/index/f02.jpg" alt="">
 								<h3 class="features_item--title">丰富移动组件库</h3>
 								<p class="features_item--text">
 									Enterplorer Studio内置丰富的移动组件，大大提升了开发效率。
@@ -394,7 +176,7 @@
             </div>
             <div class="am-u-md-3">
               <div class="features_item">
-								<img src="assets/images/index/f03.jpg" alt="">
+								<img src="<?php echo THEME_URI; ?>/assets/images/index/f03.jpg" alt="">
 								<h3 class="features_item--title">可视化界面设计</h3>
 								<p class="features_item--text">
 									整个适配过程可视化，集成手机模拟器，可以快速的开发调试。
@@ -402,7 +184,7 @@
             </div>
             <div class="am-u-md-3">
               <div class="features_item">
-								<img src="assets/images/index/f04.jpg" alt="">
+								<img src="<?php echo THEME_URI; ?>/assets/images/index/f04.jpg" alt="">
 								<h3 class="features_item--title">零秒部署</h3>
 								<p class="features_item--text">
 									无需部署，实时上传实时呈现，复用现有系统流程及数据
@@ -474,14 +256,14 @@
                   <button type="button" class="am-btn am-btn-danger">MORE&nbsp;&nbsp;>></button>
                 </div>
               </div>
-              <div class="promo_detailed-img am-show-sm-only" style="background-image: url('assets/images/index/promo_detailed_bg.jpg');"></div>
+              <div class="promo_detailed-img am-show-sm-only" style="background-image: url('<?php echo THEME_URI; ?>/assets/images/index/promo_detailed_bg.jpg');"></div>
             </div>
           </div>
 
         </div>
       </div>
     </div>
-    <div class="promo_detailed-img am-hide-sm-only" style="background-image: url('assets/images/index/promo_detailed_bg.jpg');"></div>
+    <div class="promo_detailed-img am-hide-sm-only" style="background-image: url('<?php echo THEME_URI; ?>/assets/images/index/promo_detailed_bg.jpg');"></div>
   </div>
   <!--promo_detailed end-->
 
@@ -645,38 +427,38 @@
         <div class="am-g">
           <div class="am-u-md-2 am-u-sm-4 customer-box">
             <a href="#">
-              <img class="normal-logo" src="assets/images/index/customer_logo_Microsoft.png" alt="" />
-              <img class="am-active"  alt=""src="assets/images/index/customer_logo_Microsoft_active.png" alt="" />
+              <img class="normal-logo" src="<?php echo THEME_URI; ?>/assets/images/index/customer_logo_Microsoft.png" alt="" />
+              <img class="am-active"  alt=""src="<?php echo THEME_URI; ?>/assets/images/index/customer_logo_Microsoft_active.png" alt="" />
             </a>
           </div>
           <div class="am-u-md-2 am-u-sm-4 customer-box">
             <a href="#">
-              <img class="normal-logo" src="assets/images/index/customer_logo_qhdx.png" alt="" />
-              <img class="am-active" src="assets/images/index/customer_logo_qhdx_active.png" alt="" />
+              <img class="normal-logo" src="<?php echo THEME_URI; ?>/assets/images/index/customer_logo_qhdx.png" alt="" />
+              <img class="am-active" src="<?php echo THEME_URI; ?>/assets/images/index/customer_logo_qhdx_active.png" alt="" />
             </a>
           </div>
           <div class="am-u-md-2 am-u-sm-4 customer-box">
             <a href="#">
-              <img class="normal-logo" src="assets/images/index/customer_logo_gmw.png" alt="" />
-              <img class="am-active" src="assets/images/index/customer_logo_gmw_active.png" alt="" />
+              <img class="normal-logo" src="<?php echo THEME_URI; ?>/assets/images/index/customer_logo_gmw.png" alt="" />
+              <img class="am-active" src="<?php echo THEME_URI; ?>/assets/images/index/customer_logo_gmw_active.png" alt="" />
             </a>
           </div>
           <div class="am-u-md-2 am-u-sm-4 customer-box">
             <a href="#">
-              <img class="normal-logo" src="assets/images/index/customer_logo_gov.png" alt="" />
-              <img class="am-active" src="assets/images/index/customer_logo_gov_active.png" alt="" />
+              <img class="normal-logo" src="<?php echo THEME_URI; ?>/assets/images/index/customer_logo_gov.png" alt="" />
+              <img class="am-active" src="<?php echo THEME_URI; ?>/assets/images/index/customer_logo_gov_active.png" alt="" />
             </a>
           </div>
           <div class="am-u-md-2 am-u-sm-4 customer-box">
             <a href="#">
-              <img class="normal-logo" src="assets/images/index/customer_logo_jl.png" alt="" />
-              <img class="am-active" src="assets/images/index/customer_logo_jl_active.png" alt="" />
+              <img class="normal-logo" src="<?php echo THEME_URI; ?>/assets/images/index/customer_logo_jl.png" alt="" />
+              <img class="am-active" src="<?php echo THEME_URI; ?>/assets/images/index/customer_logo_jl_active.png" alt="" />
             </a>
           </div>
           <div class="am-u-md-2 am-u-sm-4 customer-box">
             <a href="#">
-              <img class="normal-logo" src="assets/images/index/customer_logo_hx.png" alt="" />
-              <img class="am-active" src="assets/images/index/customer_logo_hx_active.png" alt="" />
+              <img class="normal-logo" src="<?php echo THEME_URI; ?>/assets/images/index/customer_logo_hx.png" alt="" />
+              <img class="am-active" src="<?php echo THEME_URI; ?>/assets/images/index/customer_logo_hx_active.png" alt="" />
             </a>
           </div>
         </div>
@@ -685,7 +467,7 @@
   <!--customer-logo end-->
 
 
-  <div class="section" style="margin-top:0px;background-image: url('assets/images/pattern-light.png');">
+  <div class="section" style="margin-top:0px;background-image: url('<?php echo THEME_URI; ?>/assets/images/pattern-light.png');">
     <div class="container">
       <!--index-container start-->
       <div class="index-container">
@@ -720,77 +502,4 @@
     </div>
   </div>
 
-
-
-
-  <!--===========layout-footer================-->
-  <div class="layout-footer">
-    <div class="footer">
-      <div style="background-color:#383d61" class="footer--bg"></div>
-      <div class="footer--inner">
-        <div class="container">
-          <div class="footer_main">
-            <div class="am-g">
-              <div class="am-u-md-3 ">
-                <div class="footer_main--column">
-                  <strong class="footer_main--column_title">关于我们</strong>
-                  <div class="footer_about">
-                      <p class="footer_about--text">
-                        云适配(AllMobilize Inc.) 是全球领先的HTML5企业移动化解决方案供应商，由前微软美国总部IE浏览器核心研发团队成员及移动互联网行业专家在美国西雅图创立.
-                      </p>
-                      <p class="footer_about--text">
-                        云适配跨屏云也成功应用于超过30万家企业网站，包括微软、联想等世界500强企业
-                      </p>
-                    </div>
-                </div>
-              </div>
-
-              <div class="am-u-md-3 ">
-                <div class="footer_main--column">
-                  <strong class="footer_main--column_title">产品中心</strong>
-                  <ul class="footer_navigation">
-                    <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">Enterplorer 企业浏览器</a></li>
-                    <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">Xcloud 网站跨屏云</a></li>
-                    <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">Amaze UI 前端开发框架</a></li>
-                    <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">Amaze UI 前端开发框架</a></li>
-                    <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">Amaze UI 前端开发框架</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="am-u-md-3 ">
-                <div class="footer_main--column">
-                  <strong class="footer_main--column_title">技术支持</strong>
-                  <ul class="footer_navigation">
-                    <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">企业移动信息化白皮书</a></li>
-                    <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">企业移动信息化白皮书</a></li>
-                    <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">企业移动信息化白皮书</a></li>
-                    <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">企业移动信息化白皮书</a></li>
-                    <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">企业移动信息化白皮书</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="am-u-md-3 ">
-                <div class="footer_main--column">
-                  <strong class="footer_main--column_title">联系详情</strong>
-                  <ul class="footer_contact_info">
-                    <li class="footer_contact_info--item"><i class="am-icon-phone"></i><span>服务专线：400 069 0309</span></li>
-                    <li class="footer_contact_info--item"><i class="am-icon-envelope-o"></i><span>yunshipei.com</span></li>
-                    <li class="footer_contact_info--item"><i class="am-icon-map-marker"></i><span>北京市海淀区海淀大街27号天使大厦（原亿景大厦）三层</span></li>
-                    <li class="footer_contact_info--item"><i class="am-icon-clock-o"></i><span>Monday - Friday, 9am - 6 pm; </span></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="assets/js/jquery-2.1.0.js" charset="utf-8"></script>
-  <script src="assets/js/amazeui.js" charset="utf-8"></script>
-  <script src="assets/js/common.js" charset="utf-8"></script>
-</body>
-
-</html>
+<?php get_footer(); ?>
